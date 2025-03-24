@@ -24,8 +24,8 @@ jobs:
     - name: inicia banco
       run: docker-composer up -d postgress
 
-    - name: lint
-      run: docker run --rm -itv $(pwd):/app -w /app golangci/golangci-lint golangci-lint run --timeout 5m controllers/ database/ models/ routes/
-    
+    - name: Lint
+      run: docker run --rm -itv $(pwd):/app -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
+   
     - name: test
       run: go test -v main_test.go
