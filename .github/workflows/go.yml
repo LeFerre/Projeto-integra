@@ -22,7 +22,7 @@ jobs:
         go-version: '1.22'
 
     - name: inicia_banco
-      run: docker composer up -d postgress
+      run: docker-composer up -d postgress
 
     - name: lint
       run: docker run --rm -itv $(pwd):/app -w /app golangci/golangci-lint golangci-lint run --timeout 5m controllers/ database/ models/ routes/
