@@ -21,7 +21,7 @@ jobs:
       with:
         go-version: '1.22'
 
-    - name: inicia_banco
+    - name: inicia banco
       run: docker-composer up -d postgress
 
     - name: lint
