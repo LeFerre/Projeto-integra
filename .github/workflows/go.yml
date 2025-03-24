@@ -37,4 +37,4 @@ jobs:
 ##      run: docker run --rm -itv $(CURDIR):/app -w /app golangci/golangci-lint golangci-lint run --timeout 5m controllers/ database/ models/ routes/
     
     - name: test
-      run: go test -v main_test.go
+      run: go test main_teste.go
